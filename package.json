@@ -4,6 +4,7 @@
   "description": "",
   "main": "assign_mentor.js",
   "scripts": {
+    "start":"node assign_mentor.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
