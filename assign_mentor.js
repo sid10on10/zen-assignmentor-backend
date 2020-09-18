@@ -12,7 +12,7 @@ const url = "mongodb+srv://sid10on10:qwerty123@cluster0.fqer8.mongodb.net/assign
 
 app.use(bodyParser.json())
 app.use(cors({
-    origin:"http://127.0.0.1:5500"
+    origin:"https://assign-mentor-frontend.netlify.app/"
 }))
 
 app.get("/",function(req,res){
