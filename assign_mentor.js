@@ -8,7 +8,7 @@ const cors = require("cors")
 const app = express();
 const PORT = process.env.PORT || 8080;
 const mongoClient = mongodb.MongoClient;
-const url = "mongodb+srv://siddhant:qwerty123@cluster0.fqer8.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const url = "mongodb+srv://sid10on10:qwerty123@cluster0.fqer8.mongodb.net/assignmentor?retryWrites=true&w=majority";
 
 app.use(bodyParser.json())
 app.use(cors({
@@ -16,7 +16,7 @@ app.use(cors({
 }))
 
 app.get("/",function(req,res){
-    res.write("<h1>You are at Root of API <br> Endpoints are -----> /students /teachers <h1>")
+    res.write("<h1>You are at Root of API <br> Endpoints are -----> /students /mentors /changementor /mentors/:mentorname /students/:mentorname<h1>")
     res.end()
 })
 
@@ -72,7 +72,6 @@ app.get("/students",async function(req,res){
         res.json(students)
         res.end()
     }catch(error){
-        client.close()
         console.log(error)
     }
 })
